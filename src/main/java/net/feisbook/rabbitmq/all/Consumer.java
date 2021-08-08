@@ -19,7 +19,7 @@ public class Consumer {
             Channel channel = null;
             try {
                 // 2.创建连接connection
-                connection = connectionFactory.newConnection("生成者");
+                connection = connectionFactory.newConnection("消费者");
                 // 3.通过连接获取通道
                 channel = connection.createChannel();
                 // 4.定义接收消息的回调

@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Consumer {
     private static Runnable runnable = new Runnable() {
         public void run() {
-// 1.创建连接工厂
+            // 1.创建连接工厂
             ConnectionFactory connectionFactory = new ConnectionFactory();
             connectionFactory.setHost("120.53.231.158");
             connectionFactory.setPort(5672);
@@ -19,7 +19,7 @@ public class Consumer {
             Channel channel = null;
             try {
                 // 2.创建连接connection
-                connection = connectionFactory.newConnection("生成者");
+                connection = connectionFactory.newConnection("消费者");
                 // 3.通过连接获取通道
                 channel = connection.createChannel();
                 // 4.定义接收消息的回调
